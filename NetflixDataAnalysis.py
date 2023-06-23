@@ -5,23 +5,12 @@ import pandas as pd  # for data preparation
 import plotly.express as px  # for data visualization
 import matplotlib.pyplot as plt
 from textblob import TextBlob  # for sentiment analysis
+
+
 pd.set_option('display.max_columns' , 10)
 plt.style.use("fivethirtyeight")
-# Creating dataframe from the Dataset netflix_titles.csv
-df = pd.read_csv("D:\\DATA\\netflix_titles.csv")
-df.set_index("show_id", inplace=True)
-
-# groupingby data with rating to get count of Ratings
-z = df.groupby(["rating"]).size().reset_index(name='counts')
-# Pie chart of Rating
-
-# pieChart = px.pie(z, values='counts', names='rating',
-#                   title='Distribution of Content Ratings on Netflix',
-#                   color_discrete_sequence=px.colors.qualitative.Set3)
-# pieChart.show(renderer='browser')
 
 
-# END of Code for pie chart
 
 # Top 5 Actors and Directors:
 # Now let’s see the top 5 successful directors on this platform:
