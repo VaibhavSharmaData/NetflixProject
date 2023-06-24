@@ -1,8 +1,6 @@
 import netflix as nf
 from matplotlib import pyplot as plt
 
-
-
 df = nf.df
 z = df.groupby(["rating"]).size().reset_index(name='counts')
 z = z[z["counts"] > 100].sort_values(by="counts")
@@ -16,6 +14,6 @@ plt.legend(title = "Ratings",bbox_to_anchor=(1,0), loc="lower right",
 plt.title("Rating pie chart")
 
 
-plt.savefig("Fif\\myplot")
+plt.savefig("D:\\python\\New\\pythonProject\\MyWork\\Fif\\myplot")
 plt.show()
 
